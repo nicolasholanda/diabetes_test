@@ -1,6 +1,6 @@
 body
 {
-	background:#336699;
+	background:red;
 	font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
 	font-size:small;
 	margin:8px 0 16px;
@@ -856,4 +856,12 @@ border-bottom: 1px solid #999;
 background: #dedede;
 font-weight: bold;
 }
+
+.container-fluid{
+	width:800px !important;
+	background-color: white;
+	box-shadow: 5px 10px #888888;
+	border: groove 1px gray;
+}
+
 
