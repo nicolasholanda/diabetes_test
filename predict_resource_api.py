@@ -12,6 +12,7 @@ from keras.models import load_model
 import numpy as np
 
 app = Flask(__name__)
+app.config['CORS_HEADERS'] = 'Content-Type'
 CORS(app)
 
 # Função que carrega a rede neural já treinada
