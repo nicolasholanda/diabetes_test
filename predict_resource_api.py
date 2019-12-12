@@ -29,7 +29,7 @@ print("Carregando a rede neural...")
 @app.route('/predict', methods=['POST'])
 def predict():
 
-    # Capturando o body da requisição
+    # Capturando o body da requisicao
     request_body = request.get_json(force=True)
 
     # Recuperando os dados do paciente, no body
@@ -45,7 +45,7 @@ def predict():
     # Montando o array com os dados do paciente
     patient_data = [pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree_func, age]
 
-    # Usando o modelo para fazer a previsao do começo de diabetes do paciente
+    # Usando o modelo para fazer a previsao do comeco de diabetes do paciente
     prediction = model.predict_proba(np.expand_dims(patient_data, axis=0))[0][0]
 
     response = {
