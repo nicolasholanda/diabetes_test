@@ -1,1 +1,1 @@
-web: python predict_resource_api.py
+web: gunicorn predict_resource_api:app --timeout 180
