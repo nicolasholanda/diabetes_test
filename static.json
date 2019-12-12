@@ -1,6 +1,6 @@
 {
   "routes": {
-    "/assets/*": "/assets/",
-    "/**": "index.html"
+    "/**": "static/form/form.html",
+    "/": "static/form/form.html"
   }
 }
