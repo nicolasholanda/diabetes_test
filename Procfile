@@ -1,1 +1,1 @@
-web: python predict_resourse_api.py
+web: python predict_resource_api.py
