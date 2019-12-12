@@ -1,78 +1,96 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Teste de Diabetes</title>
-	<link rel="stylesheet" type="text/css" href="view.css" media="all">
-	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript" src="controller.js"></script>
-</head>
-<body id="main_body" >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Teste de Diabetes</title>
+		<link rel="stylesheet" type="text/css" href="view.css" media="all">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+	<body id="main_body" class="container-fluid" >
 	
-	<img id="top" src="top.png" alt="">
-	<div id="form_container">
-	
-		<h1><a>Teste de Diabetes</a></h1>
-		<form id="form_92547" class="appnitro"  method="post" action="">
-					<div class="form_description">
-			<h2>Teste de Diabetes</h2>
-			<p>Esse teste coleta seus dados e informa a chance de você possuir início de diabetes.</p>
-		</div>						
-			<ul >
-			
-					<li id="li_1" >
-		<label class="description" for="age">Idade </label>
-		<div>
-			<input id="age" name="age" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div><p class="guidelines" id="guide_1"><small>Informe sua idade</small></p> 
-		</li>		<li id="li_2" >
-		<label class="description" for="glucose">Glucose </label>
-		<div>
-			<input id="glucose" name="glucose" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_3" >
-		<label class="description" for="insulin">Insulina </label>
-		<div>
-			<input id="insulin" name="insulin" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_4" >
-		<label class="description" for="pregnancies">Número de gravidezes </label>
-		<div>
-			<input id="pregnancies" name="pregnancies" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_5" >
-		<label class="description" for="skin">Espessura da pele </label>
-		<div>
-			<input id="skin" name="skin" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_6" >
-		<label class="description" for="blood_pressure">Pressão sanguínea </label>
-		<div>
-			<input id="blood_pressure" name="blood_pressure" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_7" >
-		<label class="description" for="bmi">Índice de massa corporal </label>
-		<div>
-			<input id="bmi" name="bmi" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>		<li id="li_8" >
-		<label class="description" for="pedigree">Função de risco hereditário </label>
-		<div>
-			<input id="pedigree" name="pedigree" class="element text medium" type="text" maxlength="255" value=""/> 
-		</div> 
-		</li>
-			
-					<li class="buttons">
-			    <input type="hidden" name="form_id" value="92547" />
-			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
-		</li>
-			</ul>
-		</form>	
-		<div id="footer">
-			<p id="answer"></p>
+		<div id="form_container row">
+			<h1>
+				<a>Teste de Diabetes</a>
+			</h1>
+			<form id="form_92547" class="appnitro"  method="post" action="">
+				<div class="form_description">
+					<h2>Teste de Diabetes</h2>
+					<p>Esse teste coleta seus dados e informa a chance de você possuir início de diabetes.</p>
+				</div>	
+				<div class="form-group">
+					<ul>
+						<div class="row">
+							<div class="col-sm">
+
+								<li id="li_1" >
+									<label class="description" for="age">Idade </label>
+									<div>
+										<input id="age" name="age" class="form-control" type="text" maxlength="255" value=""/> 
+									</div>
+								</li>
+								<li id="li_2" >
+									<label class="description" for="glucose">Glicose </label>
+									<div>
+										<input id="glucose" name="glucose" class="form-control" type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>
+								<li id="li_3" >
+									<label class="description" for="insulin">Insulina </label>
+									<div>
+										<input id="insulin" name="insulin" class="form-control"  type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>	
+								<li id="li_4" >
+									<label class="description" for="pregnancies">Número de gravidezes </label>
+									<div>
+										<input id="pregnancies" name="pregnancies" class="form-control"  type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>	
+							</div>
+							<div class="col-sm">
+								<li id="li_5" >
+									<label class="description" for="skin">Espessura da pele </label>
+									<div>
+										<input id="skin" name="skin" class="form-control"  type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>	
+								<li id="li_6" >
+									<label class="description" for="blood_pressure">Pressão sanguínea </label>
+									<div>
+										<input id="blood_pressure" name="blood_pressure" class="form-control" type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>	
+								<li id="li_7" >
+								<label class="description" for="bmi">Índice de massa corporal </label>
+								<div>
+									<input id="bmi" name="bmi" class="form-control"  type="text" maxlength="255" value=""/> 
+								</div> 
+								</li>	
+								<li id="li_8" >
+									<label class="description" for="pedigree">Função de risco hereditário </label>
+									<div>
+										<input id="pedigree" name="pedigree" class="form-control" type="text" maxlength="255" value=""/> 
+									</div> 
+								</li>
+							</div>
+						</div>
+
+						<li class="buttons">
+							<input type="hidden" name="form_id" value="92547" />
+							<input id="saveForm" class="button_text btn btn-primary" type="submit" value="Enviar dados" name="submit" value="Submit" />
+						</li>
+					</ul>
+				</div>					
+				
+			</form>	
+			<div id="footer">
+				<p id="answer"></p>
+			</div>
 		</div>
-	</div>
-	<img id="bottom" src="bottom.png" alt="">
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="controller.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>
