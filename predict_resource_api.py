@@ -1,21 +1,21 @@
-# Dependências do Flask
+# Dependencias do Flask
 from flask import Flask
 from flask import jsonify
 from flask import request
 from flask_cors import CORS
 
-# Dependências do Keras
+# Dependencias do Keras
 import keras
 from keras.models import load_model
 
-# Dependências do Numpy
+# Dependencias do Numpy
 import numpy as np
 
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
 CORS(app)
 
-# Função que carrega a rede neural já treinada
+# Funcao que carrega a rede neural ja treinada
 def get_model():
     global model
     model = load_model("model.h5")
@@ -25,7 +25,7 @@ def get_model():
 get_model()
 print("Carregando a rede neural...")
 
-# Endpoint com método que prevê se o paciente tem diabete
+# Endpoint com metodo que preve se o paciente tem diabete
 @app.route('/predict', methods=['POST'])
 def predict():
 
@@ -45,7 +45,7 @@ def predict():
     # Montando o array com os dados do paciente
     patient_data = [pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, diabetes_pedigree_func, age]
 
-    # Usando o modelo para fazer a previsão do começo de diabetes do paciente
+    # Usando o modelo para fazer a previsao do começo de diabetes do paciente
     prediction = model.predict_proba(np.expand_dims(patient_data, axis=0))[0][0]
 
     response = {
